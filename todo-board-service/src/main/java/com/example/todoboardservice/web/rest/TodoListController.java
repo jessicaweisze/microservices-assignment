@@ -3,10 +3,7 @@ package com.example.todoboardservice.web.rest;
 import com.example.todoboardservice.service.ResolutionItemService;
 import com.example.todoboardservice.web.model.ResolutionItem;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,7 +22,22 @@ public class TodoListController {
 
     @RequestMapping("/{userId}/{itemId}")
     public ResolutionItem getResolutionItem(@PathVariable("userId") String userId, @PathVariable("itemId")String itemId){
-        return new ResolutionItem(itemId, "Vorsatz 1", "Beschreibung Vorsatz 1", "todo", userId);
+        return resolutionItemService.getResolutionItem(userId, itemId);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/{userId}")
+    public void addResolutionItem(@RequestBody ResolutionItem resolutionItem){
+        resolutionItemService.addResolutionItem(resolutionItem);
+    }
+
+    @RequestMapping(method = RequestMethod.PUT, value = "/{userId}/{itemId}")
+    public void updateResolutionItem(@RequestBody ResolutionItem resolutionItem, @PathVariable("itemId")String itemId, @PathVariable("userId") String userId){
+        resolutionItemService.updateResolutionItem(userId, itemId, resolutionItem);
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, value = "/{userId}/{itemId}")
+    public void deleteResolutionItem(@PathVariable("userId") String userId, @PathVariable("itemId")String itemId){
+        resolutionItemService.deleteResolutionItem(userId, itemId);
     }
 
 }

@@ -15,6 +15,10 @@ public class ResolutionItem {
         this.userId = userId;
     }
 
+    public ResolutionItem(){
+
+    }
+
     public String getItemId() {
         return itemId;
     }
