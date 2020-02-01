@@ -7,7 +7,7 @@ public class ResolutionItem {
     private String status;
     private String userId;
 
-    public ResolutionItem(String itemId, String title, String description, String status) {
+    public ResolutionItem(String itemId, String title, String description, String status, String userId) {
         this.itemId = itemId;
         this.title = title;
         this.description = description;
@@ -15,7 +15,7 @@ public class ResolutionItem {
         this.userId = userId;
     }
 
-    public ResolutionItem(String s, String mehr_sachen_selber_nähen, String s1, String todo, String s2){
+    public ResolutionItem(){
 
     }
 

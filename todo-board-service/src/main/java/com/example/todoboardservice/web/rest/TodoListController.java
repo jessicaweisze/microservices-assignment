@@ -35,6 +35,11 @@ public class TodoListController {
         resolutionItemService.updateResolutionItem(userId, itemId, resolutionItem);
     }
 
+    @RequestMapping(method = RequestMethod.PATCH, value = "/{userId}/{itemId}")
+    public void patchStatusToDone(@RequestBody ResolutionItem resolutionItem, @PathVariable("itemId")String itemId, @PathVariable("userId") String userId){
+        resolutionItemService.patchStatusToDone(userId, itemId, resolutionItem);
+    }
+
     @RequestMapping(method = RequestMethod.DELETE, value = "/{userId}/{itemId}")
     public void deleteResolutionItem(@PathVariable("userId") String userId, @PathVariable("itemId")String itemId){
         resolutionItemService.deleteResolutionItem(userId, itemId);

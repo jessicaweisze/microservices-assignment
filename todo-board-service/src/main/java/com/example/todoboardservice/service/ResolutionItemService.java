@@ -41,6 +41,15 @@ public class ResolutionItemService {
         }
     }
 
+    public void patchStatusToDone(String userId, String itemId, ResolutionItem resolutionItem) {
+        for (int i = 0; i < toDoList.size(); i++){
+            ResolutionItem r = toDoList.get(i);
+            if(r.getItemId().equals(itemId) & r.getUserId().equals(userId)){
+                r.setStatus("done");
+            }
+        }
+    }
+
     public void deleteResolutionItem(String userId, String itemId) {
         toDoList.removeIf(r ->
                 r.getUserId().equals(userId) & r.getItemId().equals(itemId));
