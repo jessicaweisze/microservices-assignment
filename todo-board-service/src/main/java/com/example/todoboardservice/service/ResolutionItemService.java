@@ -20,4 +20,9 @@ public class ResolutionItemService {
     public List<ResolutionItem> getTodoList(@PathVariable("userId") String userId) {
         return toDoList;
     }
+
+    public ResolutionItem getResolutionItem(@PathVariable("userId") String userId, @PathVariable("itemId")String itemId){
+        return toDoList.stream().filter(r ->
+                r.getUserId().equals(userId)).findFirst().get();
+    }
 }

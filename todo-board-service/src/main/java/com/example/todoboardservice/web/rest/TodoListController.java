@@ -20,16 +20,12 @@ public class TodoListController {
 
     @RequestMapping("/{userId}")
     public List<ResolutionItem> getTodoList(@PathVariable("userId") String userId) {
-        return Arrays.asList(
-                new ResolutionItem("1", "Mehr Sachen selber nähen", "mind. 3 Kleider, 2 Tshirts und eine Tasche", "todo", "01"),
-                new ResolutionItem("2", "Mehr lesen", "mind. 5 Bücker lesen", "todo", "01"),
-                new ResolutionItem("3", "Mehr Sport machen", "mind. 2 mal pro Woche Sport machen", "todo", "01"),
-                new ResolutionItem("4", "Mehr Vielfalt beim Keksebacken", "Auch mal Alpakakekse backen", "todo", "01")
-                );
+        return resolutionItemService.getTodoList(userId);
     }
 
     @RequestMapping("/{userId}/{itemId}")
-    public ResolutionItem getResolutionItem(@PathVariable("itemId")String itemId){
-        return new ResolutionItem(itemId, "Vorsatz 1", "Beschreibung Vorsatz 1", "todo", "01");
+    public ResolutionItem getResolutionItem(@PathVariable("userId") String userId, @PathVariable("itemId")String itemId){
+        return new ResolutionItem(itemId, "Vorsatz 1", "Beschreibung Vorsatz 1", "todo", userId);
     }
+
 }
