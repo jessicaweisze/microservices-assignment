@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/UI-service/UI-service.iml" filepath="$PROJECT_DIR$/UI-service/UI-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/legacy-server/legacy-server.iml" filepath="$PROJECT_DIR$/legacy-server/legacy-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/microservices-assignment.iml" filepath="$PROJECT_DIR$/.idea/microservices-assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/success-board-service/success-board-service.iml" filepath="$PROJECT_DIR$/success-board-service/success-board-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todo-board-service/todo-board-service.iml" filepath="$PROJECT_DIR$/todo-board-service/todo-board-service.iml" />
+    </modules>
+  </component>
+</project>
