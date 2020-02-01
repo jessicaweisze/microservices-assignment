@@ -8,10 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="discovery-server" />
-        <module name="legacy-server" />
         <module name="success-board-service" />
         <module name="todo-board-service" />
         <module name="UI-service" />
+        <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +21,7 @@
       <module name="success-board-service" target="1.8" />
       <module name="todo-board-service" target="1.8" />
       <module name="UI-service" target="1.8" />
+      <module name="user-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
