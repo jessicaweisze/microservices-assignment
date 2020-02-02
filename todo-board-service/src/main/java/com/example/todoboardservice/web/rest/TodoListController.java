@@ -5,8 +5,8 @@ import com.example.todoboardservice.web.model.ResolutionItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/todoresolutions")
@@ -15,14 +15,14 @@ public class TodoListController {
     @Autowired
     private ResolutionItemService resolutionItemService;
 
-    @RequestMapping("/{userId}")
-    public List<ResolutionItem> getTodoList(@PathVariable("userId") String userId) {
-        return resolutionItemService.getTodoList(userId);
+    @RequestMapping()
+    public List<ResolutionItem> getTodoList() {
+        return resolutionItemService.getTodoList();
     }
 
-    @RequestMapping("/{userId}/{itemId}")
-    public ResolutionItem getResolutionItem(@PathVariable("userId") String userId, @PathVariable("itemId")String itemId){
-        return resolutionItemService.getResolutionItem(userId, itemId);
+   @RequestMapping("/{userId}/{itemId}")
+    public Optional<ResolutionItem> getResolutionItem(@PathVariable("itemId")String itemId){
+        return resolutionItemService.getResolutionItem(itemId);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/{userId}")

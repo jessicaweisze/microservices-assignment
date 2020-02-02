@@ -1,6 +1,7 @@
 package com.example.userservice.web.rest;
 
 import com.example.userservice.service.UserService;
+import com.example.userservice.web.model.ResolutionItem;
 import com.example.userservice.web.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,10 @@ public class UserController {
         return userService.getUser(userId);
     }
 
+    /*@RequestMapping("/users/{userId}")
+    public List<ResolutionItem> getUserResolutions(@PathVariable("userId") String userId){
+        return userService.getUserResolutions(userId);
+    }*/
 
     @RequestMapping(method = RequestMethod.POST, value = "/users/{userId}")
     public void addUser(@RequestBody User user){

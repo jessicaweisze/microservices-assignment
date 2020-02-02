@@ -1,7 +1,9 @@
 package com.example.userservice.service;
 
+import com.example.userservice.web.model.ResolutionItem;
 import com.example.userservice.web.model.User;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,4 +46,10 @@ public class UserService {
         userList.removeIf(r ->
                 r.getUserId().equals(userId));
     }
+
+    /*public List<ResolutionItem> getUserResolutions(String userId) {
+        RestTemplate restTemplate = new RestTemplate();
+        ResolutionItem resolutionItem = restTemplate.getForObject("http://localhost:8082/todoresolutions/" + userId, ResolutionItem.class);
+        return resolutionItem.getItemId().;
+    }*/
 }

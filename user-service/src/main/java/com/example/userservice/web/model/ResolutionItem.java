@@ -1,13 +1,6 @@
-package com.example.todoboardservice.web.model;
+package com.example.userservice.web.model;
 
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
 public class ResolutionItem {
-
-    @Id
     private String itemId;
     private String title;
     private String description;
@@ -66,4 +59,3 @@ public class ResolutionItem {
         this.userId = userId;
     }
 }
-

@@ -1,7 +1,10 @@
 package com.example.successboardservice.service;
 
 import com.example.successboardservice.web.model.ResolutionItem;
+import com.example.successboardservice.web.model.User;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +23,13 @@ public class DoneListService {
     public List<ResolutionItem> getDoneList(String userId) {
         return doneList.stream().filter(r -> r.getUserId().equals(userId) & r.getStatus().equals("done")).collect(Collectors.toList());
     }
+
+    /*public List<User> getUsers(){
+        RestTemplate restTemplate = new RestTemplate();
+        User user = restTemplate.getForObject("http://localhost:8083/users", User.class);
+        List<User> users = user;
+        return users;
+    }*/
 
     /*Brauchen wir das?*/
     public ResolutionItem getDoneResolutionItem(String userId, String itemId){
