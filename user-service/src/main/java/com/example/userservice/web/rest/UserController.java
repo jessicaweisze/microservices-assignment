@@ -21,7 +21,7 @@ public class UserController {
     }
 
     @RequestMapping("/users/{userId}")
-    public Optional<ResolutionUser> getUser(@PathVariable("userId") String userId){
+    public Optional<ResolutionUser> getUser(@PathVariable("userId") Integer userId){
         return userService.getUser(userId);
     }
 
@@ -36,12 +36,12 @@ public class UserController {
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/users/{userId}")
-    public void updateResolutionItem(@RequestBody ResolutionUser resolutionUser, @PathVariable("userId") String userId){
+    public void updateResolutionItem(@RequestBody ResolutionUser resolutionUser, @PathVariable("userId") Integer userId){
         userService.updateUser(userId, resolutionUser);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/users/{userId}")
-    public void deleteResolutionItem(@PathVariable("userId") String userId){
+    public void deleteResolutionItem(@PathVariable("userId") Integer userId){
         userService.deleteUser(userId);
     }
 

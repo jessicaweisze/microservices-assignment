@@ -14,13 +14,6 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    /*private List<ResolutionUser> userList= new ArrayList<>(Arrays.asList(
-            new ResolutionUser("01", "Anakin"),
-            new ResolutionUser("02", "Obi Wan"),
-            new ResolutionUser("03", "Leia"),
-            new ResolutionUser("04", "Luke")
-    ));*/
-
     public List<ResolutionUser> getUserList() {
         List<ResolutionUser> resolutionUserList = new ArrayList<>();
         userRepository.findAll()
@@ -28,7 +21,7 @@ public class UserService {
         return resolutionUserList;
     }
 
-    public Optional<ResolutionUser> getUser(String userId){
+    public Optional<ResolutionUser> getUser(Integer userId){
         return userRepository.findById(userId);
     }
 
@@ -36,7 +29,7 @@ public class UserService {
         userRepository.save(resolutionUser);
     }
 
-    public void updateUser(String userId, ResolutionUser resolutionUser) {
+    public void updateUser(Integer userId, ResolutionUser resolutionUser) {
        /* for (int i = 0; i < userList.size(); i++){
             ResolutionUser r = userList.get(i);
             if(r.getUserId().equals(userId)){
@@ -47,7 +40,7 @@ public class UserService {
        userRepository.save(resolutionUser);
     }
 
-    public void deleteUser(String userId) {
+    public void deleteUser(Integer userId) {
         userRepository.deleteById(userId);
     }
 

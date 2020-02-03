@@ -16,13 +16,6 @@ public class ResolutionItemService {
     @Autowired
     private ResolutionItemRepository resolutionItemRepository;
 
-    /*private List<ResolutionItem> toDoList= new ArrayList<>(Arrays.asList(
-            new ResolutionItem(1, "Mehr Sachen selber nähen", "mind. 3 Kleider, 2 Tshirts und eine Tasche", "todo", "01"),
-            new ResolutionItem(2, "Mehr lesen", "mind. 5 Bücker lesen", "todo", "02"),
-            new ResolutionItem(3, "Mehr Sport machen", "mind. 2 mal pro Woche Sport machen", "todo", "01"),
-            new ResolutionItem(4, "Mehr Vielfalt beim Keksebacken", "Auch mal Alpakakekse backen", "todo", "02")
-    ));*/
-
     public List<ResolutionItem> getTodoList() {
         List<ResolutionItem> todoList  = new ArrayList<>();
         resolutionItemRepository.findAll()
