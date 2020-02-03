@@ -1,12 +1,12 @@
 package com.example.userservice.web.rest;
 
 import com.example.userservice.service.UserService;
-import com.example.userservice.web.model.ResolutionItem;
 import com.example.userservice.web.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class UserController {
@@ -21,7 +21,7 @@ public class UserController {
     }
 
     @RequestMapping("/users/{userId}")
-    public User getUser(@PathVariable("userId") String userId){
+    public Optional<User> getUser(@PathVariable("userId") String userId){
         return userService.getUser(userId);
     }
 

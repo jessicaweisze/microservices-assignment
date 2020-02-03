@@ -1,24 +1,32 @@
 package com.example.userservice.web.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table()
 public class User {
 
-    private String userId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="name-id")
+    private Integer nameId;
+    @Column(name="user-name")
     private String name;
 
-    public User(String userId, String name) {
-        this.userId = userId;
+    public User(Integer nameId, String name) {
+        this.nameId = nameId;
         this.name = name;
     }
     public User(){
 
     }
 
-    public String getUserId() {
-        return userId;
+    public Integer getNameId() {
+        return nameId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setNameId(Integer nameId) {
+        this.nameId = nameId;
     }
 
     public String getName() {

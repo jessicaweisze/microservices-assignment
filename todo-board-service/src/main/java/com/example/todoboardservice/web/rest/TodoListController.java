@@ -15,13 +15,13 @@ public class TodoListController {
     @Autowired
     private ResolutionItemService resolutionItemService;
 
-    @RequestMapping()
+    @RequestMapping("/{userId}")
     public List<ResolutionItem> getTodoList() {
         return resolutionItemService.getTodoList();
     }
 
    @RequestMapping("/{userId}/{itemId}")
-    public Optional<ResolutionItem> getResolutionItem(@PathVariable("itemId")String itemId){
+    public Optional<ResolutionItem> getResolutionItem(@PathVariable("itemId")Integer itemId){
         return resolutionItemService.getResolutionItem(itemId);
     }
 
@@ -31,17 +31,17 @@ public class TodoListController {
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/{userId}/{itemId}")
-    public void updateResolutionItem(@RequestBody ResolutionItem resolutionItem, @PathVariable("itemId")String itemId, @PathVariable("userId") String userId){
+    public void updateResolutionItem(@RequestBody ResolutionItem resolutionItem, @PathVariable("itemId")Integer itemId, @PathVariable("userId") String userId){
         resolutionItemService.updateResolutionItem(userId, itemId, resolutionItem);
     }
 
-    @RequestMapping(method = RequestMethod.PATCH, value = "/{userId}/{itemId}")
-    public void patchStatusToDone(@RequestBody ResolutionItem resolutionItem, @PathVariable("itemId")String itemId, @PathVariable("userId") String userId){
+    /*@RequestMapping(method = RequestMethod.PATCH, value = "/{userId}/{itemId}")
+    public void patchStatusToDone(@RequestBody ResolutionItem resolutionItem, @PathVariable("itemId")Integer itemId, @PathVariable("userId") String userId){
         resolutionItemService.patchStatusToDone(userId, itemId, resolutionItem);
-    }
+    }*/
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/{userId}/{itemId}")
-    public void deleteResolutionItem(@PathVariable("userId") String userId, @PathVariable("itemId")String itemId){
+    public void deleteResolutionItem(@PathVariable("userId") String userId, @PathVariable("itemId")Integer itemId){
         resolutionItemService.deleteResolutionItem(userId, itemId);
     }
 

@@ -2,19 +2,22 @@ package com.example.todoboardservice.web.model;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class ResolutionItem {
 
     @Id
-    private String itemId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer itemId;
     private String title;
     private String description;
     private String status;
     private String userId;
 
-    public ResolutionItem(String itemId, String title, String description, String status, String userId) {
+    public ResolutionItem(Integer itemId, String title, String description, String status, String userId) {
         this.itemId = itemId;
         this.title = title;
         this.description = description;
@@ -26,11 +29,11 @@ public class ResolutionItem {
 
     }
 
-    public String getItemId() {
+    public Integer getItemId() {
         return itemId;
     }
 
-    public void setItemId(String itemId) {
+    public void setItemId(Integer itemId) {
         this.itemId = itemId;
     }
 
