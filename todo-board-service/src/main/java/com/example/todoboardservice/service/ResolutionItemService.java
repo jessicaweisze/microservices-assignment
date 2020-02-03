@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,10 +15,17 @@ public class ResolutionItemService {
     @Autowired
     private ResolutionItemRepository resolutionItemRepository;
 
+    public List<ResolutionItem> getTodoListById(String userId) {
+        List<ResolutionItem> todoList  = new ArrayList<>();
+        resolutionItemRepository.findByUserId(userId)
+        .forEach (todoList::add);
+        return todoList;
+    }
+
     public List<ResolutionItem> getTodoList() {
         List<ResolutionItem> todoList  = new ArrayList<>();
         resolutionItemRepository.findAll()
-        .forEach (todoList::add);
+                .forEach (todoList::add);
         return todoList;
     }
 

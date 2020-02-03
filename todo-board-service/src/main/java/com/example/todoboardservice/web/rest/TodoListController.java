@@ -9,28 +9,32 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/todoresolutions")
 public class TodoListController {
 
     @Autowired
     private ResolutionItemService resolutionItemService;
 
-    @RequestMapping("/{userId}")
+    @RequestMapping("/todoresolutions")
     public List<ResolutionItem> getTodoList() {
         return resolutionItemService.getTodoList();
     }
 
-   @RequestMapping("/{userId}/{itemId}")
+    @RequestMapping("/todoresolutions/{userId}")
+    public List<ResolutionItem> getTodoList(@PathVariable("userId")String userId) {
+        return resolutionItemService.getTodoListById(userId);
+    }
+
+   @RequestMapping("/todoresolutions/{userId}/{itemId}")
     public Optional<ResolutionItem> getResolutionItem(@PathVariable("itemId")Integer itemId){
         return resolutionItemService.getResolutionItem(itemId);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/{userId}")
+    @RequestMapping(method = RequestMethod.POST, value = "/todoresolutions/{userId}")
     public void addResolutionItem(@RequestBody ResolutionItem resolutionItem){
         resolutionItemService.addResolutionItem(resolutionItem);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/{userId}/{itemId}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/todoresolutions/{userId}/{itemId}")
     public void updateResolutionItem(@RequestBody ResolutionItem resolutionItem, @PathVariable("itemId")Integer itemId, @PathVariable("userId") String userId){
         resolutionItemService.updateResolutionItem(userId, itemId, resolutionItem);
     }

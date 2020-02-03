@@ -1,6 +1,8 @@
 package com.example.todoboardservice.web.model;
 
 
+import sun.awt.image.IntegerComponentRaster;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,9 +17,9 @@ public class ResolutionItem {
     private String title;
     private String description;
     private String status;
-    private String userId;
+    private Integer userId;
 
-    public ResolutionItem(Integer itemId, String title, String description, String status, String userId) {
+    public ResolutionItem(Integer itemId, String title, String description, String status, Integer userId) {
         this.itemId = itemId;
         this.title = title;
         this.description = description;
@@ -61,11 +63,11 @@ public class ResolutionItem {
         this.status = status;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 }

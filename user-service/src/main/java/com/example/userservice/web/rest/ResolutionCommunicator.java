@@ -1,0 +1,25 @@
+package com.example.userservice.web.rest;
+
+import com.example.userservice.service.ResolutionCommunicatorService;
+import com.example.userservice.web.model.ResolutionItem;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+public class ResolutionCommunicator {
+
+    @Autowired
+    private ResolutionCommunicatorService resolutionCommunicatorService;
+
+
+    @GetMapping("/resolutionuser")
+    public List<ResolutionItem> findRatingById() {
+        return resolutionCommunicatorService.findAllResolutions();
+
+    }
+}
+

@@ -14,7 +14,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
     @RequestMapping("/users")
     public List<ResolutionUser> getUserList() {
         return userService.getUserList();

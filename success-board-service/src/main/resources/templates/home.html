@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome</h1>
+
+<h2>Liste alle Vorsätze:</h2>
+
+<table border="1" cellpadding="10">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Beschreibung</th>
+        <th>Status</th>
+        <th>userId</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="ResolutionItem : ${resolutionList}">
+        <td th:text="${ResolutionItem.title}">Name</td>
+        <td th:text="${ResolutionItem.description}">Beschreibung</td>
+        <td th:text="${ResolutionItem.status}">Status</td>
+        <!--<td th:text="${userResolutionItem.userName}">userId</td>-->
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
