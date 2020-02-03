@@ -1,8 +1,8 @@
 package com.example.userservice.mysql.repository;
 
-import com.example.userservice.web.model.User;
+import com.example.userservice.web.model.ResolutionUser;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository <User, String> {
+public interface UserRepository extends CrudRepository <ResolutionUser, String> {
 
 }

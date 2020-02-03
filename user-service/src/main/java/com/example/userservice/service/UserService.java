@@ -1,7 +1,7 @@
 package com.example.userservice.service;
 
 import com.example.userservice.mysql.repository.UserRepository;
-import com.example.userservice.web.model.User;
+import com.example.userservice.web.model.ResolutionUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,37 +14,37 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    /*private List<User> userList= new ArrayList<>(Arrays.asList(
-            new User("01", "Anakin"),
-            new User("02", "Obi Wan"),
-            new User("03", "Leia"),
-            new User("04", "Luke")
+    /*private List<ResolutionUser> userList= new ArrayList<>(Arrays.asList(
+            new ResolutionUser("01", "Anakin"),
+            new ResolutionUser("02", "Obi Wan"),
+            new ResolutionUser("03", "Leia"),
+            new ResolutionUser("04", "Luke")
     ));*/
 
-    public List<User> getUserList() {
-        List<User> userList  = new ArrayList<>();
+    public List<ResolutionUser> getUserList() {
+        List<ResolutionUser> resolutionUserList = new ArrayList<>();
         userRepository.findAll()
-                .forEach (userList::add);
-        return userList;
+                .forEach (resolutionUserList::add);
+        return resolutionUserList;
     }
 
-    public Optional<User> getUser(String userId){
+    public Optional<ResolutionUser> getUser(String userId){
         return userRepository.findById(userId);
     }
 
-    public void addUser(User user) {
-        userRepository.save(user);
+    public void addUser(ResolutionUser resolutionUser) {
+        userRepository.save(resolutionUser);
     }
 
-    public void updateUser(String userId, User user) {
+    public void updateUser(String userId, ResolutionUser resolutionUser) {
        /* for (int i = 0; i < userList.size(); i++){
-            User r = userList.get(i);
+            ResolutionUser r = userList.get(i);
             if(r.getUserId().equals(userId)){
-                userList.set(i, user);
+                userList.set(i, resolutionUser);
                 return;
             }
         }*/
-       userRepository.save(user);
+       userRepository.save(resolutionUser);
     }
 
     public void deleteUser(String userId) {
