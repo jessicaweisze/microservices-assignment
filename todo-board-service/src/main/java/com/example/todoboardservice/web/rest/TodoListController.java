@@ -29,7 +29,7 @@ public class TodoListController {
         return resolutionItemService.getResolutionItem(itemId);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/todoresolutions/{userId}")
+    @RequestMapping(method = RequestMethod.POST, value = "/todoresolutions/create")
     public void addResolutionItem(@RequestBody ResolutionItem resolutionItem){
         resolutionItemService.addResolutionItem(resolutionItem);
     }
