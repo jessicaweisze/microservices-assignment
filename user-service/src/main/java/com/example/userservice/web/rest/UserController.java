@@ -29,17 +29,17 @@ public class UserController {
         return userService.getUserResolutions(userId);
     }*/
 
-    @RequestMapping(method = RequestMethod.POST, value = "/users/{userId}")
+    @RequestMapping(method = RequestMethod.POST, value = "/users/add")
     public void addUser(@RequestBody ResolutionUser resolutionUser){
         userService.addUser(resolutionUser);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/users/{userId}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/users/update/{userId}")
     public void updateResolutionItem(@RequestBody ResolutionUser resolutionUser, @PathVariable("userId") Integer userId){
         userService.updateUser(userId, resolutionUser);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/users/{userId}")
+    @RequestMapping(method = RequestMethod.DELETE, value = "/users/delete/{userId}")
     public void deleteResolutionItem(@PathVariable("userId") Integer userId){
         userService.deleteUser(userId);
     }

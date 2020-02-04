@@ -15,7 +15,7 @@ public class ResolutionItemService {
     @Autowired
     private ResolutionItemRepository resolutionItemRepository;
 
-    public List<ResolutionItem> getTodoListById(String userId) {
+    public List<ResolutionItem> getTodoListById(Integer userId) {
         List<ResolutionItem> todoList  = new ArrayList<>();
         resolutionItemRepository.findByUserId(userId)
         .forEach (todoList::add);
@@ -38,13 +38,6 @@ public class ResolutionItemService {
     }
 
     public void updateResolutionItem(String userId, Integer itemId, ResolutionItem resolutionItem) {
-        /*for (int i = 0; i < toDoList.size(); i++){
-            ResolutionItem r = toDoList.get(i);
-            if(r.getItemId().equals(itemId) & r.getUserId().equals(userId)){
-                toDoList.set(i, resolutionItem);
-                return;
-            }
-        }*/
         resolutionItemRepository.save(resolutionItem);
     }
 
@@ -57,9 +50,7 @@ public class ResolutionItemService {
         }
     }*/
 
-    public void deleteResolutionItem(String userId, Integer itemId) {
-       /* toDoList.removeIf(r ->
-                r.getUserId().equals(userId) & r.getItemId().equals(itemId));*/
+    public void deleteResolutionItem(Integer itemId) {
        resolutionItemRepository.deleteById(itemId);
     }
 }

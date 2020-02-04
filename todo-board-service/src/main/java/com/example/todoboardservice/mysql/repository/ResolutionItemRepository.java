@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface ResolutionItemRepository extends CrudRepository <ResolutionItem, Integer> {
 
-    public List<ResolutionItem> findByUserId(String userId);
+    public List<ResolutionItem> findByUserId(Integer userId);
 
 }

@@ -2,14 +2,13 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
+    <link href="../myStyles.css" rel="stylesheet" />
     <title>Home</title>
 </head>
 <body>
 <h1>Welcome</h1>
 
 <h2>Liste alle Vorsätze:</h2>
-
-<a href="/new">Neuer Vorsatz</a>
 
 <table border="1" cellpadding="10">
     <thead>
@@ -18,6 +17,8 @@
         <th>Beschreibung</th>
         <th>Status</th>
         <th>userId</th>
+        <th>Link zum User</th>
+        <th>Neuen Vorsatz erstellen</th>
     </tr>
     </thead>
     <tbody>
@@ -25,7 +26,11 @@
         <td th:text="${ResolutionItem.title}">Name</td>
         <td th:text="${ResolutionItem.description}">Beschreibung</td>
         <td th:text="${ResolutionItem.status}">Status</td>
-        <!--<td th:text="${userResolutionItem.userName}">userId</td>-->
+        <td th:text="${ResolutionItem.userId}">UserId</td>
+        <td><a th:href="@{'/resolutionuser/' + ${ResolutionItem.userId}}">zum User</a></td>
+        <td>
+            <a th:href="@{'/resolutionuser/create'}">Neuen Vorsatz erstellen</a>
+        </td>
     </tr>
     </tbody>
 </table>

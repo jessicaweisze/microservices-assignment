@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="../myStyles.css" rel="stylesheet" />
+    <title>All user:</title>
+</head>
+<body>
+    <table>
+        <tbody>
+        <tr class="userList" th:each="ResolutionUser : ${resolutionUser}">
+            <td th:text="${ResolutionUser.resUserId}">Id:</td>
+            <td th:text="${ResolutionUser.resUserName}">Name:</td>
+            <td>
+                <a th:href="@{'/resolutionuser/' + ${ResolutionUser.resUserId}}">zum User</a>
+            </td>
+            <td>
+                <a th:href="@{'/resolutionuser/deleteUser/' + ${ResolutionUser.resUserId}}">User löschen</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a th:href="@{'/resolutionuser/createUser'}">Neuen User erstellen</a>
+
+    <div>
+        <a th:href="@{'/resolutionuser/all'}">Vorsätze aller Nutzer sehen</a>
+    </div>
+
+</body>
+</html>

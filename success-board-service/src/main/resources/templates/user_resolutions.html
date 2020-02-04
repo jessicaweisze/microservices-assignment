@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="../myStyles.css" rel="stylesheet" />
+    <title>User Resolutions</title>
+</head>
+<body>
+<h1>Deine Vorsätze:</h1>
+<a href="/resolutionuser">Zurück zur Benutzerübersicht</a>
+<table border="1" cellpadding="10">
+    <thead>
+    <tr>
+        <th>2020 will ich:</th>
+        <th>Beschreibung</th>
+        <th>Status</th>
+        <th>Bearbeiten</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="ResolutionItem : ${userResolutions}">
+        <td th:text="${ResolutionItem.title}">2020 will ich:</td>
+        <td th:text="${ResolutionItem.description}">Beschreibung</td>
+        <td th:text="${ResolutionItem.status}">Status</td>
+        <td >
+            <a th:href="@{'/resolutionuser/update/' + ${ResolutionItem.itemId}}">Bearbeiten</a>
+            <a th:href="@{'/resolutionuser/delete/' + ${ResolutionItem.itemId}}">Löschen</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a class="newRes" th:href="@{'/resolutionuser/create'}">Neuen Vorsatz erstellen</a>
+</div>
+</body>
+</html>

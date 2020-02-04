@@ -1,13 +1,13 @@
 package com.example.successboardservice.web.model;
 
 public class ResolutionItem {
-    private String itemId;
+    private Integer itemId;
     private String title;
     private String description;
     private String status;
-    private String userId;
+    private Integer userId;
 
-    public ResolutionItem(String itemId, String title, String description, String status, String userId) {
+    public ResolutionItem(Integer itemId, String title, String description, String status, Integer userId) {
         this.itemId = itemId;
         this.title = title;
         this.description = description;
@@ -19,11 +19,11 @@ public class ResolutionItem {
 
     }
 
-    public String getItemId() {
+    public Integer getItemId() {
         return itemId;
     }
 
-    public void setItemId(String itemId) {
+    public void setItemId(Integer itemId) {
         this.itemId = itemId;
     }
 
@@ -51,11 +51,11 @@ public class ResolutionItem {
         this.status = status;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 }

@@ -20,11 +20,11 @@ public class TodoListController {
     }
 
     @RequestMapping("/todoresolutions/{userId}")
-    public List<ResolutionItem> getTodoList(@PathVariable("userId")String userId) {
+    public List<ResolutionItem> getTodoList(@PathVariable("userId")Integer userId) {
         return resolutionItemService.getTodoListById(userId);
     }
 
-   @RequestMapping("/todoresolutions/{userId}/{itemId}")
+   @RequestMapping("/resolutions/{itemId}")
     public Optional<ResolutionItem> getResolutionItem(@PathVariable("itemId")Integer itemId){
         return resolutionItemService.getResolutionItem(itemId);
     }
@@ -44,9 +44,9 @@ public class TodoListController {
         resolutionItemService.patchStatusToDone(userId, itemId, resolutionItem);
     }*/
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/{userId}/{itemId}")
-    public void deleteResolutionItem(@PathVariable("userId") String userId, @PathVariable("itemId")Integer itemId){
-        resolutionItemService.deleteResolutionItem(userId, itemId);
+    @RequestMapping(method = RequestMethod.DELETE, value = "/delete/{itemId}")
+    public void deleteResolutionItem(@PathVariable("itemId")Integer itemId){
+        resolutionItemService.deleteResolutionItem(itemId);
     }
 
 }

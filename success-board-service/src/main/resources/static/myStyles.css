@@ -1,0 +1,41 @@
+*{
+    font-family: Arial;
+}
+
+a{
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+}
+
+td{
+    padding:20px;
+}
+
+userList.td{
+    padding: 40px;
+    width: 50px;
+}
+userList.th{
+    padding: 40px;
+    width: 50px;
+}
+
+.back{
+    padding:10px;
+    background-color: darksalmon;
+}
+
+tr.userList {
+    background-color: darkseagreen;
+    display: block;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+ul{
+    list-style-type: none;
+    text-align: center;
+    display: inline-table;
+    background-color: cornflowerblue;
+    padding: 35px;
+    width: 100px;
+}
