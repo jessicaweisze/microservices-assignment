@@ -3,17 +3,12 @@ package com.example.successboardservice.service;
 import com.example.successboardservice.web.model.ResolutionItem;
 import com.example.successboardservice.web.model.ResolutionUser;
 import com.example.successboardservice.web.model.UserResolutionItem;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,11 +16,10 @@ public class ResolutionCommunicatorService {
     private final RestTemplate template;
     //private final String url;
 
-    public ResolutionCommunicatorService(/*@Value("${remote.service.ratingservice.url}") String url*/) {
+    public ResolutionCommunicatorService() {
         this.template = new RestTemplate();
         //this.url = url;
     }
-
     public List<ResolutionItem> findAllResolutions() {
         final String requestUrl = "http://localhost:8082" + "/todoresolutions";
         final List<ResolutionItem> response = this.template.getForObject(requestUrl, List.class);
@@ -51,22 +45,10 @@ public class ResolutionCommunicatorService {
                 .collect(Collectors.toList());
     }
 
-    /*public ResolutionItem createNewResolution() {
-        final String requestUrl = "http://localhost:8082" + "/todoresolutions/create";
-        final ResolutionItem response = this.template.getForObject(requestUrl, ResolutionItem.class);
-        return response;
-    }*/
-/*/todoresolutions/{userId}/create*/
-
-    @HystrixCommand(fallbackMethod = "showFallBack")
     public ResolutionItem saveResolutionItem(ResolutionItem resolutionItem) {
         final String requestUrl = "http://localhost:8082" + "/todoresolutions/create";
         final ResolutionItem response = this.template.postForObject(requestUrl, resolutionItem, ResolutionItem.class);
         return response;
-    }
-
-    private String showFallBack() {
-        return "Der Service ist gerade leider nicht erreichbar! Versuche es später erneut!";
     }
 
     public List<ResolutionUser> findAllUser() {

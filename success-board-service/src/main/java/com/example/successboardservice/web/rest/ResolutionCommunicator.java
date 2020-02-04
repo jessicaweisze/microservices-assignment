@@ -21,6 +21,7 @@ public class ResolutionCommunicator {
     @Autowired
     private ResolutionCommunicatorService resolutionCommunicatorService;
 
+    @HystrixCommand(fallbackMethod = "getSaveFallback")
     @GetMapping("/resolutionuser")
     public String showAllUser(Model model){
         List<ResolutionUser> resolutionUser = resolutionCommunicatorService.findAllUser();
@@ -28,6 +29,9 @@ public class ResolutionCommunicator {
         return "user";
     }
 
+    private String getSaveFallback(Model model) {
+        return "Speichern ist gerade leider nicht möglich, da der Service nicht erreichbar ist. Versuche es später erneut!";
+    }
     @GetMapping("/resolutionuser/createUser")
     public String createNewUser(Model model){
         ResolutionUser resolutionUser = new ResolutionUser();
