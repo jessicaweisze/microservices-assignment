@@ -10,7 +10,6 @@
         <module name="discovery-server" />
         <module name="success-board-service" />
         <module name="todo-board-service" />
-        <module name="UI-service" />
         <module name="user-service" />
       </profile>
     </annotationProcessing>

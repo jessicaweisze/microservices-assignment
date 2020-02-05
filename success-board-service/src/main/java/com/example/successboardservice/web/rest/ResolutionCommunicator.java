@@ -21,7 +21,6 @@ public class ResolutionCommunicator {
     @Autowired
     private ResolutionCommunicatorService resolutionCommunicatorService;
 
-    @HystrixCommand(fallbackMethod = "getSaveFallback")
     @GetMapping("/resolutionuser")
     public String showAllUser(Model model){
         List<ResolutionUser> resolutionUser = resolutionCommunicatorService.findAllUser();
@@ -45,7 +44,7 @@ public class ResolutionCommunicator {
         return "redirect:/resolutionuser";
     }
 
-
+    @HystrixCommand(fallbackMethod = "getSaveFallback")
     @GetMapping("/resolutionuser/all")
     public String findAllResolutions(Model model) {
         List<ResolutionItem> resolutionList = resolutionCommunicatorService.findAllResolutions();

@@ -6,7 +6,6 @@
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/discovery-server/pom.xml" />
         <option value="$PROJECT_DIR$/legacy-server/pom.xml" />
-        <option value="$PROJECT_DIR$/success-board-service/pom.xml" />
         <option value="$PROJECT_DIR$/todo-board-service/pom.xml" />
         <option value="$PROJECT_DIR$/UI-service/pom.xml" />
         <option value="$PROJECT_DIR$/user-service/pom.xml" />
