@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3201baeb-9935-4b0e-a976-e0da488a4720" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/SuccessBoardServiceApplication.java" afterPath="$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/SuccessBoardServiceApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/service/ResolutionCommunicatorService.java" afterPath="$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/service/ResolutionCommunicatorService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/success-board-service/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/success-board-service/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo-board-service/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/todo-board-service/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/discovery-server/target/" />
     <ignored path="$PROJECT_DIR$/config-server/target/" />
@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ResolutionCommunicatorService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ResolutionCommunicatorService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/service/ResolutionCommunicatorService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
+            <state relative-caret-position="660">
               <caret line="44" column="109" lean-forward="false" selection-start-line="44" selection-start-column="109" selection-end-line="44" selection-end-column="109" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -34,11 +34,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/success-board-service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+              <folding>
+                <marker date="1580859991361" expanded="true" signature="1267:2565" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/success-board-service/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="46" />
+            <state relative-caret-position="285">
+              <caret line="19" column="68" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -47,8 +69,8 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo-board-service/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="42" />
+            <state relative-caret-position="150">
+              <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -130,8 +152,6 @@
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/web/model/ResolutionUser.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/mysql/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/service/UserService.java" />
-        <option value="$PROJECT_DIR$/success-board-service/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/user-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/success-board-service/pom.xml" />
         <option value="$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/web/model/UserResolutionItem.java" />
         <option value="$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/web/model/ResolutionUser.java" />
@@ -151,10 +171,12 @@
         <option value="$PROJECT_DIR$/success-board-service/src/main/resources/static/myStyles.css" />
         <option value="$PROJECT_DIR$/success-board-service/src/main/resources/templates/edit_resolution.html" />
         <option value="$PROJECT_DIR$/todo-board-service/Dockerfile" />
-        <option value="$PROJECT_DIR$/todo-board-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/web/rest/ResolutionCommunicator.java" />
         <option value="$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/SuccessBoardServiceApplication.java" />
         <option value="$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/service/ResolutionCommunicatorService.java" />
+        <option value="$PROJECT_DIR$/success-board-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/todo-board-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/user-service/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -222,47 +244,7 @@
               <item name="success-board-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservices-assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservices-assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="success-board-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="successboardservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservices-assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservices-assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="success-board-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="successboardservice" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservices-assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservices-assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="success-board-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="successboardservice" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservices-assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservices-assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="success-board-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="successboardservice" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="microservices-assignment" type="b2602c69:ProjectViewProjectNode" />
@@ -381,7 +363,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SuccessBoardServiceApplication">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="ConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -531,12 +513,12 @@
       <updated>1580555098633</updated>
       <workItem from="1580555102492" duration="118000" />
       <workItem from="1580555261771" duration="126587000" />
-      <workItem from="1580927794347" duration="423000" />
+      <workItem from="1580927794347" duration="1374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134419000" />
+    <option name="totallyTimeSpent" value="135370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="724" extended-state="0" />
@@ -551,7 +533,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3100159" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3100159" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750398" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -715,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/success-board-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
@@ -737,30 +712,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/service/DoneListService.java" />
-    <entry file="file://$PROJECT_DIR$/success-board-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <folding>
-            <marker date="1580859991361" expanded="true" signature="1267:2565" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="1282:1397" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="1412:1532" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="1547:1668" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="1833:1962" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="1977:2100" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="2116:2235" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="2250:2548" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="2389:2532" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="2405:2515" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="2590:2881" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="2607:2856" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="2623:2838" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="2891:3053" ph="..." />
-            <marker date="1580859991361" expanded="true" signature="2903:3043" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/service/ResolutionCommunicatorService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -940,29 +891,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/service/ResolutionCommunicatorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="46" />
+        <state relative-caret-position="660">
+          <caret line="44" column="109" lean-forward="false" selection-start-line="44" selection-start-column="109" selection-end-line="44" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/success-board-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+          <folding>
+            <marker date="1580859991361" expanded="true" signature="1267:2565" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/success-board-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/todo-board-service/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="42" />
+        <state relative-caret-position="150">
+          <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/success-board-service/src/main/java/com/example/successboardservice/service/ResolutionCommunicatorService.java">
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="44" column="109" lean-forward="false" selection-start-line="44" selection-start-column="109" selection-end-line="44" selection-end-column="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="19" column="68" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
