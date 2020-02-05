@@ -29,7 +29,7 @@ public class ResolutionCommunicator {
     }
 
     private String getSaveFallback(Model model) {
-        return "Speichern ist gerade leider nicht möglich, da der Service nicht erreichbar ist. Versuche es später erneut!";
+        return "fallback";
     }
     @GetMapping("/resolutionuser/createUser")
     public String createNewUser(Model model){
@@ -94,7 +94,6 @@ public class ResolutionCommunicator {
         String referer = request.getHeader("Referer");
         return "redirect:"+ referer;
     }
-
 
 }
 
