@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @Service
 public class ResolutionCommunicatorService {
 
-    @Autowired
+   @Autowired
     private final RestTemplate template;
     //private final String url;
 

@@ -4,7 +4,6 @@ package com.example.successboardservice.web.rest;
 import com.example.successboardservice.service.ResolutionCommunicatorService;
 import com.example.successboardservice.web.model.ResolutionItem;
 import com.example.successboardservice.web.model.ResolutionUser;
-import com.example.successboardservice.web.model.UserResolutionItem;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +19,11 @@ public class ResolutionCommunicator {
 
     @Autowired
     private ResolutionCommunicatorService resolutionCommunicatorService;
+
+    @GetMapping("/")
+    public String showIndex(){
+        return "index";
+    }
 
     @GetMapping("/resolutionuser")
     public String showAllUser(Model model){

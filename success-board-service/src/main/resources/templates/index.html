@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="../myStyles.css" rel="stylesheet" />
+    <title>Willkommen</title>
+</head>
+<body>
+
+<div align="center">
+    <h1>Willkommen</h1>
+    <a class="index" th:href="@{'/resolutionuser'}">User Overview</a>
+    <a class="index" th:href="@{'/resolutionuser/createUser'}">Create new user</a>
+    <a class="index" th:href="@{'/resolutionuser/all'}">See all resolutions</a>
+    <a class="index" th:href="@{'/resolutionuser/create'}">Create new resolution</a>
+
+</div>
+
+</body>
+</html>
