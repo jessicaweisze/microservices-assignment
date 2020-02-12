@@ -10,10 +10,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService {
+public class UserService implements UserServiceInterface {
     @Autowired
     UserRepository userRepository;
 
+    @Override
     public List<ResolutionUser> getUserList() {
         List<ResolutionUser> resolutionUserList = new ArrayList<>();
         userRepository.findAll()
@@ -21,32 +22,23 @@ public class UserService {
         return resolutionUserList;
     }
 
+    @Override
     public Optional<ResolutionUser> getUser(Integer userId){
         return userRepository.findById(userId);
     }
 
+    @Override
     public void addUser(ResolutionUser resolutionUser) {
         userRepository.save(resolutionUser);
     }
 
+    @Override
     public void updateUser(Integer userId, ResolutionUser resolutionUser) {
-       /* for (int i = 0; i < userList.size(); i++){
-            ResolutionUser r = userList.get(i);
-            if(r.getUserId().equals(userId)){
-                userList.set(i, resolutionUser);
-                return;
-            }
-        }*/
        userRepository.save(resolutionUser);
     }
 
+    @Override
     public void deleteUser(Integer userId) {
         userRepository.deleteById(userId);
     }
-
-    /*public List<ResolutionItem> getUserResolutions(String userId) {
-        RestTemplate restTemplate = new RestTemplate();
-        ResolutionItem resolutionItem = restTemplate.getForObject("http://localhost:8082/todoresolutions/" + userId, ResolutionItem.class);
-        return resolutionItem.getItemId().;
-    }*/
 }

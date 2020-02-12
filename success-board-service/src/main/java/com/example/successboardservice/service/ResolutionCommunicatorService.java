@@ -13,16 +13,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class ResolutionCommunicatorService {
+public class ResolutionCommunicatorService implements ResolutionCommunicatorServiceInterface {
 
-   @Autowired
+    @Autowired
     private final RestTemplate template;
-    //private final String url;
 
     public ResolutionCommunicatorService() {
         this.template = new RestTemplate();
-        //this.url = url;
     }
+
+    @Override
     public List<ResolutionItem> findAllResolutions() {
         final String requestUrl = "http://todo-board-service" + "/todoresolutions";
         final List<ResolutionItem> response = this.template.getForObject(requestUrl, List.class);
@@ -30,6 +30,7 @@ public class ResolutionCommunicatorService {
         return response;
     }
 
+    @Override
     public List<ResolutionItem> findResolutionsByUser(Integer userId) {
         final String requestUrl = "http://todo-board-service" + "/todoresolutions/" + userId;
         final List<ResolutionItem> response = this.template.getForObject(requestUrl, List.class);
@@ -37,6 +38,7 @@ public class ResolutionCommunicatorService {
         return response;
     }
 
+    @Override
     public List<UserResolutionItem> getUserResolutions() {
         final String requestUrl = "http://todo-board-service" + "/todoresolutions";
         List<ResolutionItem> iteml = this.template.getForObject(requestUrl, List.class);
@@ -48,36 +50,42 @@ public class ResolutionCommunicatorService {
                 .collect(Collectors.toList());
     }
 
+    @Override
     public ResolutionItem saveResolutionItem(ResolutionItem resolutionItem) {
         final String requestUrl = "http://todo-board-service" + "/todoresolutions/create";
         final ResolutionItem response = this.template.postForObject(requestUrl, resolutionItem, ResolutionItem.class);
         return response;
     }
 
+    @Override
     public List<ResolutionUser> findAllUser() {
         final String requestUrl = "http://resolutionUser-service" + "/users";
         final List<ResolutionUser> response = this.template.getForObject(requestUrl, List.class);
         return response;
-
     }
+
+    @Override
     public ResolutionUser saveUser(ResolutionUser resolutionUser) {
         final String requestUrl = "http://resolutionUser-service" + "/users/add";
         final ResolutionUser response = this.template.postForObject(requestUrl, resolutionUser, ResolutionUser.class);
         return response;
     }
 
+    @Override
     public ResolutionUser deleteUser(Integer userId) {
         final String requestUrl = "http://resolutionUser-service" + "/users/delete/" + userId;
         final ResponseEntity<ResolutionUser> response = this.template.exchange(requestUrl, HttpMethod.DELETE, null, ResolutionUser.class);
         return response.getBody();
     }
 
+    @Override
     public ResolutionItem get(Integer itemId) {
         final String requestUrl = "http://todo-board-service" + "/resolutions/"+ itemId;
         final ResolutionItem response = this.template.getForObject(requestUrl, ResolutionItem.class);
         return response;
     }
 
+    @Override
     public ResolutionItem deleteResolutionItem(Integer itemId) {
         final String requestUrl = "http://todo-board-service" + "/delete/"+ itemId;
         final ResponseEntity<ResolutionItem> response = this.template.exchange(requestUrl, HttpMethod.DELETE, null, ResolutionItem.class);

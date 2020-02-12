@@ -10,11 +10,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ResolutionItemService {
+public class ResolutionItemService implements ResolutionItemServiceInterface {
 
     @Autowired
     private ResolutionItemRepository resolutionItemRepository;
 
+    @Override
     public List<ResolutionItem> getTodoListById(Integer userId) {
         List<ResolutionItem> todoList  = new ArrayList<>();
         resolutionItemRepository.findByUserId(userId)
@@ -22,6 +23,7 @@ public class ResolutionItemService {
         return todoList;
     }
 
+    @Override
     public List<ResolutionItem> getTodoList() {
         List<ResolutionItem> todoList  = new ArrayList<>();
         resolutionItemRepository.findAll()
@@ -29,14 +31,17 @@ public class ResolutionItemService {
         return todoList;
     }
 
+    @Override
     public Optional<ResolutionItem> getResolutionItem(Integer itemId){
         return resolutionItemRepository.findById(itemId);
     }
 
+    @Override
     public void addResolutionItem(ResolutionItem resolutionItem) {
         resolutionItemRepository.save(resolutionItem);
     }
 
+    @Override
     public void updateResolutionItem(String userId, Integer itemId, ResolutionItem resolutionItem) {
         resolutionItemRepository.save(resolutionItem);
     }
@@ -50,6 +55,7 @@ public class ResolutionItemService {
         }
     }*/
 
+    @Override
     public void deleteResolutionItem(Integer itemId) {
        resolutionItemRepository.deleteById(itemId);
     }
