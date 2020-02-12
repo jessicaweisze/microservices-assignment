@@ -370,36 +370,6 @@
               <item name="todo-board-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todoboardservice" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservices-assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservices-assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="todo-board-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todoboardservice" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservices-assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservices-assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="todo-board-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="todoboardservice" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservices-assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservices-assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="todo-board-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -686,12 +656,12 @@
       <workItem from="1580555261771" duration="126587000" />
       <workItem from="1580927794347" duration="6031000" />
       <workItem from="1580947202203" duration="1168000" />
-      <workItem from="1581507327683" duration="20350000" />
+      <workItem from="1581507327683" duration="20534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162247000" />
+    <option name="totallyTimeSpent" value="162431000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
