@@ -6,6 +6,8 @@ import com.example.successboardservice.web.model.ResolutionItem;
 import com.example.successboardservice.web.model.ResolutionUser;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +27,7 @@ public class ResolutionCommunicator {
         return "index";
     }
 
+    @HystrixCommand(fallbackMethod = "getSaveFallback")
     @GetMapping("/resolutionuser")
     public String showAllUser(Model model){
         List<ResolutionUser> resolutionUser = resolutionCommunicatorService.findAllUser();
@@ -56,6 +59,7 @@ public class ResolutionCommunicator {
         return "home";
     }
 
+    @HystrixCommand(fallbackMethod = "getSaveFallback")
     @GetMapping("/resolutionuser/create")
     public String createNewResolution(Model model){
         ResolutionItem resolutionItem = new ResolutionItem();
@@ -76,8 +80,9 @@ public class ResolutionCommunicator {
         return "user_resolutions";
     }
 
+    @Retryable(maxAttempts = 9, value = Exception.class, backoff = @Backoff(delay = 5000))
     @RequestMapping("/resolutionuser/update/{itemId}")
-    public ModelAndView showEditProductPage(@PathVariable("itemId") Integer itemId) {
+    public ModelAndView showEditItemPage(@PathVariable("itemId") Integer itemId) throws Exception {
         ModelAndView mav = new ModelAndView("edit_resolution");
         ResolutionItem resolutionItem = resolutionCommunicatorService.get(itemId);
         mav.addObject("resolutionItem", resolutionItem);
