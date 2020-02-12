@@ -99,8 +99,8 @@
       <file leaf-file-name="todo-board-service-mysql.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/configs/todo-board-service-mysql.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+            <state relative-caret-position="75">
+              <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -502,7 +502,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TodoBoardServiceApplication">
+  <component name="RunManager" selected="Spring Boot.SuccessBoardServiceApplication">
     <configuration name="ConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -656,12 +656,12 @@
       <workItem from="1580555261771" duration="126587000" />
       <workItem from="1580927794347" duration="6031000" />
       <workItem from="1580947202203" duration="1168000" />
-      <workItem from="1581507327683" duration="14010000" />
+      <workItem from="1581507327683" duration="14445000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155907000" />
+    <option name="totallyTimeSpent" value="156342000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1173,8 +1173,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/todo-board-service-mysql.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        <state relative-caret-position="75">
+          <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
           <folding />
         </state>
       </provider>
