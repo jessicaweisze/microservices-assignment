@@ -23,7 +23,7 @@
 
 **4. implementation of 2 resilience patterns**
   > Im success-board-service sind folgende Resilience Patterns implementiert:
-* Circuit Breaker Pattern und 
+* Circuit Breaker Pattern (Fallback) und 
 * Retry Pattern
 
 **5. demonstrate/show scaling capabilities**
@@ -31,6 +31,7 @@
 * Jeder Service hat ein Dockerfile und kann in einem Docker Container laufen
 * DB laufen in einem Docker Container
 * Mehrere Instanzen können laufen --> Instanz wird automatisch gewählt
+* URL ist kein Hinderniss --> Services können über den Namen kommunizieren
 
 **6. use of spring cloud services**
 * Euraka Discovery Service
