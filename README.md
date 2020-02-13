@@ -2,6 +2,39 @@
 
 Unsere Application ermöglicht es verschiedenen Usern Vorsätze anzulegen, die sie erledigen wollen. Jeder User kann Vorsätze anlegen, anschauen, bearbeiten und löschen. Außerdem kann er sich alle Vorsätze von allen Usern anschauen, um sich inspirieren zu lassen. Außerdem gibt es die Möglichkeit einen neuen User hinzuzufügen oder bestehende zu löschen. 
 
+## Project Requirements 
+
+1. 3 microservices
+* todo-board-service
+... * Vorsätze 
+* user-service
+... * User 
+* success-board-service / UI Service
+... * User und Vorsätze zusammenführen + UI
+
+2. communication between 2 microservices
+* Im success-board-service wird mit den beiden Microservices user-service und Todo-board-service kommuniziert.
+
+3. use of a database 
+* Im user-service wird eine Postgres Datenbank genutzt
+* Im todo-board-service wird eine MySQL Datenbank genutzt
+
+4. implementation of 2 resilience patterns
+...Im success-board-service sind folgende Resilience Patterns implementiert:
+* Circuit Breaker Pattern und 
+* Retry Pattern
+
+5. demonstrate/show scaling capabilities
+* Open Feign implementiert
+* Jeder Service hat ein Dockerfile und kann in einem Docker Container laufen
+* DB laufen in einem Docker Container
+* Mehrere Instanzen können laufen --> Instanz wird automatisch gewählt
+
+6. use of spring cloud services
+* Euraka Discovery Service
+* Spring Config
+
+
 To Dos und die einzelnen Microservices:
 
 Download Git Repository.
@@ -71,7 +104,7 @@ Starte den user-Service:
 5. Build image: `docker build -t user-service .`
 6. Run image: `docker run -p 8070:8083 -e "SPRING_PROFILES_ACTIVE=postgres" user-service`
 
-## success-board- service / ui-service
+## success-board-service / ui-service
 
 Der success-board-service führt die anderen beiden Services in einer UI zusammen. Um die Ui umzusetzten wird Thymeleaf genutzt.
 
@@ -97,5 +130,6 @@ Starte den success-board-Service:
 4. Build image: `docker build -t success-board-service .`
 5. Run image: `docker run -p 8080:8081 success-board-service`
 6. Visit `http://localhost:8080`
+
 
 
