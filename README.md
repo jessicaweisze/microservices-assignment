@@ -1,6 +1,6 @@
 # microservices-assignment
 
-> Unsere Application ermöglicht es verschiedenen Usern Vorsätze anzulegen, die sie erledigen wollen. Jeder User kann Vorsätze anlegen, anschauen, bearbeiten und löschen. Außerdem kann er sich alle Vorsätze von allen Usern anschauen, um sich inspirieren zu lassen. Außerdem gibt es die Möglichkeit einen neuen User hinzuzufügen oder bestehende zu löschen. 
+> Unsere Application ermöglicht es verschiedenen Usern Vorsätze anzulegen, die sie erledigen wollen. Jeder User kann Vorsätze anlegen, anschauen, bearbeiten und löschen. Außerdem kann er sich alle Vorsätze von allen Usern anschauen, um sich inspirieren zu lassen. Desweiteren gibt es die Möglichkeit einen neuen User hinzuzufügen oder bestehende zu löschen. 
 
 ## Project Requirements 
 
