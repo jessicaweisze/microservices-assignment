@@ -43,7 +43,7 @@ Download Git Repository.
 
 ## Config Server
 
-Das ist unser Config Server, die Properties Files befinden sich alle in unserem git Repository config Ordner.
+Das ist der Config Server, die Properties Files befinden sich alle in dem git Repository configs Ordner.
 
 Starte den Config Server:
 1. `cd /config-server`
