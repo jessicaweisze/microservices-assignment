@@ -1,41 +1,43 @@
 # microservices-assignment
 
-Unsere Application ermöglicht es verschiedenen Usern Vorsätze anzulegen, die sie erledigen wollen. Jeder User kann Vorsätze anlegen, anschauen, bearbeiten und löschen. Außerdem kann er sich alle Vorsätze von allen Usern anschauen, um sich inspirieren zu lassen. Außerdem gibt es die Möglichkeit einen neuen User hinzuzufügen oder bestehende zu löschen. 
+> Unsere Application ermöglicht es verschiedenen Usern Vorsätze anzulegen, die sie erledigen wollen. Jeder User kann Vorsätze anlegen, anschauen, bearbeiten und löschen. Außerdem kann er sich alle Vorsätze von allen Usern anschauen, um sich inspirieren zu lassen. Außerdem gibt es die Möglichkeit einen neuen User hinzuzufügen oder bestehende zu löschen. 
 
 ## Project Requirements 
 
-1. 3 microservices
+**1. 3 microservices**
 * todo-board-service
-... * Vorsätze 
-* user-service
-... * User 
-* success-board-service / UI Service
-... * User und Vorsätze zusammenführen + UI
 
-2. communication between 2 microservices
+  > Vorsätze 
+* user-service
+  > User 
+* success-board-service / UI Service
+
+  > User und Vorsätze zusammenführen + UI
+
+**2. communication between 2 microservices**
 * Im success-board-service wird mit den beiden Microservices user-service und Todo-board-service kommuniziert.
 
-3. use of a database 
+**3. use of a database** 
 * Im user-service wird eine Postgres Datenbank genutzt
 * Im todo-board-service wird eine MySQL Datenbank genutzt
 
-4. implementation of 2 resilience patterns
-...Im success-board-service sind folgende Resilience Patterns implementiert:
+**4. implementation of 2 resilience patterns**
+  > Im success-board-service sind folgende Resilience Patterns implementiert:
 * Circuit Breaker Pattern und 
 * Retry Pattern
 
-5. demonstrate/show scaling capabilities
+**5. demonstrate/show scaling capabilities**
 * Open Feign implementiert
 * Jeder Service hat ein Dockerfile und kann in einem Docker Container laufen
 * DB laufen in einem Docker Container
 * Mehrere Instanzen können laufen --> Instanz wird automatisch gewählt
 
-6. use of spring cloud services
+**6. use of spring cloud services**
 * Euraka Discovery Service
 * Spring Config
 
 
-To Dos und die einzelnen Microservices:
+**To Dos und die einzelnen Microservices:**
 
 Download Git Repository.
 
