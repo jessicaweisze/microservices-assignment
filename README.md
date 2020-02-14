@@ -48,7 +48,6 @@ Das ist der Config Server, die Properties Files befinden sich alle in dem git Re
 
 Starte den Config Server:
 1. `cd /config-server`
-2. run application `./mvnw spring-boot:run`
 2. Build app via `mvn clean install`
 3. Build image: `docker build -t config-server .`
 4. Run image: `docker run -p 8888:8888 config-server`
@@ -59,7 +58,6 @@ In dem Eureka Discovery Service werden unsere Microservices registriert und erm√
 
 Starte den Discovery-Service:
 1. `cd /discovery-server`
-2. run application `./mvnw spring-boot:run`
 2. Build app via `mvn clean install`
 3. Build image: `docker build -t discovery-server .`
 4. Run image: `docker run -p 8761:8761 discovery-server`
@@ -81,10 +79,9 @@ Im todo-board Service ist eine MySql Datenbank implementiert.
 Starte den todo-board-Service:
 1. `cd /todo-board-service`
 2. Run a MySql Database in a Docker container: `docker run -e MYSQL_ROOT_PASSWORD=ThePassword -e MYSQL_USER=springuser -e MYSQL_PASSWORD=ThePassword -e MYSQL_DATABASE=db_resolution_ms -e MYSQL_ROOT_HOST=% --name mysqlDocker --publish 3306:3306 mysql`
-3. run application `./mvnw spring-boot:run`
-4. Build app via `mvn clean install`
-5. Build image: `docker build -t todo-board-service .`
-6. Run image: `docker run -p 8090:8082 -e "SPRING_PROFILES_ACTIVE=mysql" todo-board-service`
+3. Build app via `mvn clean install`
+4. Build image: `docker build -t todo-board-service .`
+5. Run image: `docker run -p 8090:8082 -e "SPRING_PROFILES_ACTIVE=mysql" todo-board-service`
 
 ## user-service
 
@@ -102,10 +99,9 @@ Im USer Service ist eine PostgreSQL Datenbank implementiert.
 Starte den user-Service:
 1. `cd /user-service`
 2. Run a Postgres Database in a Docker container: `docker run -e POSTGRES_USER=springuser -e POSTGRES_PASSWORD=Password -e POSTGRES_DB=db_user_ms --name postgresDocker --publish 5432:5432 postgres`
-3. run application `./mvnw spring-boot:run`
-4. Build app via `mvn clean install`
-5. Build image: `docker build -t user-service .`
-6. Run image: `docker run -p 8070:8083 -e "SPRING_PROFILES_ACTIVE=postgres" user-service`
+3. Build app via `mvn clean install`
+4. Build image: `docker build -t user-service .`
+5. Run image: `docker run -p 8070:8083 -e "SPRING_PROFILES_ACTIVE=postgres" user-service`
 
 ## success-board-service / ui-service
 
@@ -128,11 +124,10 @@ Der success-board-service f√ºhrt die anderen beiden Services in einer UI zusamme
 
 Starte den success-board-Service:
 1. `cd /success-board-service`
-2. run application `./mvnw spring-boot:run`
-3. Build app via `mvn clean install`
-4. Build image: `docker build -t success-board-service .`
-5. Run image: `docker run -p 8080:8081 success-board-service`
-6. Visit `http://localhost:8080`
+2. Build app via `mvn clean install`
+3. Build image: `docker build -t success-board-service .`
+4. Run image: `docker run -p 8080:8081 success-board-service`
+5. Visit `http://localhost:8080`
 
 
 
